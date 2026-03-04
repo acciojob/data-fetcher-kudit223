@@ -30,12 +30,12 @@ const App = () => {
   }
 
   if(error){
-    return <div>No data found</div>
+    return <div>An error occurred: </div>
   }
 
   return (
     <div>
-      Data Fetched From API
+      Data Fetched from API
        <pre>
         {JSON.stringify(displayData,null ,2)}
        </pre>
