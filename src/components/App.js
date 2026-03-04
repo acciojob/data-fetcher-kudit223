@@ -30,7 +30,7 @@ const App = () => {
   }
 
   if(error){
-    return <div>An error occurred: </div>
+    return <div>No data found</div>
   }
 
   return (
