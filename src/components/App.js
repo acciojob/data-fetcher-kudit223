@@ -26,18 +26,17 @@ const App = () => {
   },[]);
 
   if(loading){
-    return <pre>Loading...</pre>
+    return <div>Loading...</div>
   }
 
   if(error){
-    return <pre>No data found</pre>
+    return <div>No data found</div>
   }
 
   return (
     <div>
-      
+      Data Fetched From API
        <pre>
-        <h1>Data Fetched From API</h1>
         {JSON.stringify(displayData,null ,2)}
        </pre>
     </div>
