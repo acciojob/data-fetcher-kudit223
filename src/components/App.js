@@ -15,7 +15,9 @@ const App = () => {
       return response.json();
     }).then(data=>{
       setTimeout(()=>{
-        setDisplayData(data.products);
+        setDisplayData(()=>{
+          return {'products':data.products}
+        });
         setLoading(false);
         console.log(data.products)
       },100)
@@ -30,7 +32,7 @@ const App = () => {
   }
 
   if(error){
-    return <div>No data found</div>
+    return <div>An error occurred: No data found</div>
   }
 
   return (
