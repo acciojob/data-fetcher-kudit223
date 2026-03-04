@@ -18,7 +18,7 @@ const App = () => {
         setDisplayData(data.products);
         setLoading(false);
         console.log(data.products)
-      },1000)
+      },100)
     }).catch((err)=>{
       setError(true);
       setLoading(false);
@@ -26,11 +26,11 @@ const App = () => {
   },[]);
 
   if(loading){
-    return <div>Loading...</div>
+    return <pre>Loading...</pre>
   }
 
   if(error){
-    return <h1>No data found</h1>
+    return <pre>No data found</pre>
   }
 
   return (
